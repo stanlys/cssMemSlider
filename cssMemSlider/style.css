@@ -111,6 +111,37 @@
   #slider__radio-main5~.wrapper #slider__radio-custom-label5:hover>.slider__radio-custom-img{
     background-image: url("assets/controls/UnChecked-hover.svg");
   }
+  .slider-caption__label{
+      opacity: 0;
+  }
+
+  #slider__radio-main1:checked~.wrapper #slider-caption__caption1{
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 1.5s ease-out 0s;
+  }
+
+  #slider__radio-main2:checked~.wrapper #slider-caption__caption2{
+    transform: translateY(-2em);
+    opacity: 1;
+    animation: ease-in-out 2s;
+    transition: all 1.5s ease-out 0s;
+  }
+  #slider__radio-main3:checked~.wrapper #slider-caption__caption3{
+    transform: translateY(-4em);
+    opacity: 1;
+    transition: all 1.5s ease-out 0s;
+  }
+  #slider__radio-main4:checked~.wrapper #slider-caption__caption4{
+    transform: translateY(-6em);
+    opacity: 1;
+    transition: all 1.5s ease-out 0s;
+  }
+  #slider__radio-main5:checked~.wrapper #slider-caption__caption5{
+    transform: translateY(-8em);
+    opacity: 1;
+    transition: all 1.5s ease-out 0s;
+  }
 
 
   @media screen and (min-width:769px){
