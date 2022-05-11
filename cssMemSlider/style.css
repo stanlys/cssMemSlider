@@ -10,12 +10,17 @@
     overflow: hidden;
     margin: 0 auto;
     border-radius: 1em;
-    border: 0.1em solid gray;
-    box-sizing: border-box;
+    /*border: 0.1em solid gray;
+    box-sizing: border-box;*/
     align-items: center;
   }
 
-  .caption {
+  .slider__item>img{
+      width: 55vw;
+      border-radius: 1em;
+  }
+
+  .slider-caption {
     grid-area: Label;
     padding-left: 2vw;
     width: 25vw;
@@ -25,19 +30,88 @@
     overflow: hidden;
   }
 
-  .control {
-    padding-top: 1em;
+  .slider-control {
     grid-area: Control;
     display: flex;
     height: 5vh;
     width:20vw;
     justify-content: flex-end;
-    align-items: center;
+    align-content: center;
   }
   
+  .slider-control__forlabel{
+      width: 3em;
+      height: 3em;
+  }
+
   .slider__radio-main{
       display: none;
   }
+
+  .slider__radio-custom{
+      height: 3em;
+      width: 3em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .slider__radio-custom:hover{
+      cursor: pointer;
+  }
+
+  .slider__radio-custom-img{
+      width: 1.1em;
+      height: 1.1em;
+      background-image: url('assets/controls/UnChecked.svg');
+  }
+
+  
+  #slider__radio-main1:checked~.wrapper #slider__radio-custom-label1>.slider__radio-custom-img{
+    background-image: url("assets/controls/Checked.svg");
+  }
+  #slider__radio-main1:checked~.wrapper #slider__radio-custom-label1:hover>.slider__radio-custom-img{
+    background-image: url("assets/controls/Checked-hover.svg");
+  }
+  #slider__radio-main1~.wrapper #slider__radio-custom-label1:hover>.slider__radio-custom-img{
+    background-image: url("assets/controls/UnChecked-hover.svg");
+  }
+  #slider__radio-main2:checked~.wrapper #slider__radio-custom-label2>.slider__radio-custom-img{
+    background-image: url("assets/controls/Checked.svg");
+  }
+  #slider__radio-main2:checked~.wrapper #slider__radio-custom-label2:hover>.slider__radio-custom-img{
+    background-image: url("assets/controls/Checked-hover.svg");
+  }
+  #slider__radio-main2~.wrapper #slider__radio-custom-label2:hover>.slider__radio-custom-img{
+    background-image: url("assets/controls/UnChecked-hover.svg");
+  }
+  #slider__radio-main3:checked~.wrapper #slider__radio-custom-label3>.slider__radio-custom-img{
+    background-image: url("assets/controls/Checked.svg");
+  }
+  #slider__radio-main3:checked~.wrapper #slider__radio-custom-label3:hover>.slider__radio-custom-img{
+    background-image: url("assets/controls/Checked-hover.svg");
+  }
+  #slider__radio-main3~.wrapper #slider__radio-custom-label3:hover>.slider__radio-custom-img{
+    background-image: url("assets/controls/UnChecked-hover.svg");
+  }
+  #slider__radio-main4:checked~.wrapper #slider__radio-custom-label4>.slider__radio-custom-img{
+    background-image: url("assets/controls/Checked.svg");
+  }
+  #slider__radio-main4:checked~.wrapper #slider__radio-custom-label4:hover>.slider__radio-custom-img{
+    background-image: url("assets/controls/Checked-hover.svg");
+  }
+  #slider__radio-main4~.wrapper #slider__radio-custom-label4:hover>.slider__radio-custom-img{
+    background-image: url("assets/controls/UnChecked-hover.svg");
+  }
+  #slider__radio-main5:checked~.wrapper #slider__radio-custom-label5>.slider__radio-custom-img{
+    background-image: url("assets/controls/Checked.svg");
+  }
+  #slider__radio-main5:checked~.wrapper #slider__radio-custom-label5:hover>.slider__radio-custom-img{
+    background-image: url("assets/controls/Checked-hover.svg");
+  }
+  #slider__radio-main5~.wrapper #slider__radio-custom-label5:hover>.slider__radio-custom-img{
+    background-image: url("assets/controls/UnChecked-hover.svg");
+  }
+
 
   @media screen and (min-width:769px){
     .wrapper {
@@ -72,13 +146,13 @@
       "Label ";
   } 
 
-  .control{
+  .slider-control{
     margin:0 auto;
     justify-content: center;
     padding-top: .2em;
   }
 
-  .caption {
+  .slider-caption {
     grid-area: Label;
     padding-left: 2vw;
     width: 50vw;
