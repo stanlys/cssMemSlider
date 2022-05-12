@@ -125,26 +125,37 @@
   #slider__radio-main1:checked~.wrapper .slider .slide1{
     margin-left: 0;
     transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s; 
+    animation: captionscale 1s forwards;
   }
 
   #slider__radio-main2:checked~.wrapper .slider .slide1{
     margin-left: -55vw;
-    transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s; 
+    transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+    animation: captionscale 1s forwards; 
   }
 
   #slider__radio-main3:checked~.wrapper .slider .slide1{
     margin-left: -110vw;
     transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s; 
+    animation: captionscale 1s forwards;
   }
 
   #slider__radio-main4:checked~.wrapper .slider .slide1{
     margin-left: -165vw;
     transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s; 
+    
   }
 
   #slider__radio-main5:checked~.wrapper .slider .slide1{
     margin-left: -220vw;
     transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s; 
+    
+  }
+
+  #slider__radio-main1:checked~.wrapper .slider, #slider__radio-main2:checked~.wrapper .slider,
+  #slider__radio-main3:checked~.wrapper .slider, #slider__radio-main4:checked~.wrapper .slider,
+  #slider__radio-main5:checked~.wrapper .slider{
+    animation: captionscale 1s forwards;
   }
 
   #slider__radio-main1:checked~.wrapper .slider-caption__label{
@@ -221,6 +232,10 @@
     width: 50vw;
     font-size: small;
   }
+
+  .slider-caption__label{
+    width: 50vw;
+  }
   .slider-control__forlabel{
     width: 2em;
     height: 3em;
@@ -230,5 +245,17 @@
     height: 3em;
     width: 2em;
   }  
+
+}
+
+@keyframes captionscale {
+  from{
+    color: #0b76ef;
+    transform: scale(1.2);
+  }
+to{
+    color: white;
+    transform: scale(1);
+}
 
 }
